@@ -49,23 +49,9 @@ public class AddressBook implements IAddressBook {
     }
 
     @Override
-    public void add(String fileName) {
-        System.out.println("Enter the details");
-        System.out.println("Enter your FirstName");
-        personDetails.setFirstName(s.nextLine());
-        System.out.println("Enter your LastName");
-        personDetails.setLastName(s.nextLine());
-        System.out.println("Enter your Address");
-        personDetails.setAddress(s.nextLine());
-        System.out.println("Enter your City");
-        personDetails.setCity(s.nextLine());
-        System.out.println("Enter your State");
-        personDetails.setState(s.nextLine());
-        System.out.println("Enter your ZipCode");
-        personDetails.setZip(s.nextDouble());
-        personBookList.add(personDetails);
-        System.out.println(personDetails.toString());
-        writeToGson(personBookList,fileName);
+    public AddressDetails add(String firstName, String lastName, String address, String city, String state, String zipcode) {
+        AddressDetails personDetails=new AddressDetails(firstName,lastName,address,city,state,zipcode );
+        return personDetails;
     }
 
     private void writeToGson(ArrayList<AddressDetails> personBookList,String fileName) {

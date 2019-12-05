@@ -3,5 +3,6 @@ package com.addressbook;
 public interface IAddressBook {
     public String createFile(String fileName);
     public String deleteFile(String fileName);
-   public void add(String filename);
+    public AddressDetails add(String firstName, String lastName, String address, String city, String state, String zipcode);
+   public String isFilePresentOrNot(String filePath,String FileName);
 }

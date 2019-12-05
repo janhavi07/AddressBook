@@ -3,16 +3,23 @@ package com.addressbook;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class AddressTest {
     private static final String FILE_PATH="/home/admin293/Desktop/AddressBook/AddressBooks/";
-    AddressBook addressBook=new AddressBook();
+    IAddressBook addressBook=new AddressBook();
+    ArrayList<AddressDetails> personBookList=new ArrayList<>();
+    AddressDetails details=new AddressDetails();
+
+
     @Test
     public void toCheckIf_AddressDetails_areInitialised() {
         AddressDetails details = new AddressDetails("Janhavi","Parte","FriendsColony",
-                                                                  "Mumbai","Maharashtra",400042);
+                "Mumbai","Maharashtra","400042");
         String name=details.getFirstName();
         Assert.assertEquals("Janhavi",name);
     }
+
 
     @Test
     public void ifFileDoesNotExists_thenReturn_NotPresent() {
@@ -44,7 +51,9 @@ public class AddressTest {
     }
 
     @Test
-    public void to_AddPersonDetails() {
-        addressBook.add("book1.json");
+    public void toCheckDetails_Added_in_PersonDetails() {
+        AddressDetails details= addressBook.add("Janhavi","Parte","FriendsColony",
+                "Mumbai","Maharashtra","400042");
+       Assert.assertEquals("Janhavi",details.getFirstName());
     }
 }

@@ -6,13 +6,13 @@ public class AddressDetails {
     private String address;
     private String city;
     private String state;
-    private Double zip;
+    private String zip;
 
     public AddressDetails(){
 
     }
 
-   public AddressDetails(String firstName, String lastName, String address, String city, String state, double zip){
+   public AddressDetails(String firstName, String lastName, String address, String city, String state, String zip){
        this.firstName=firstName;
        this.lastName=lastName;
        this.address=address;
@@ -62,11 +62,11 @@ public class AddressDetails {
         this.state = state;
     }
 
-    public Double getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(Double zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
