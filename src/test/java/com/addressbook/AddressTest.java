@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class AddressTest {
-    private static final String FILE_PATH="/home/admin293/Desktop/AddressBook/AddressBooks";
+    private static final String FILE_PATH="/home/admin293/Desktop/AddressBook/AddressBooks/";
     AddressBook addressBook=new AddressBook();
     @Test
     public void toCheckIf_AdrressDetails_areInitialised() {
@@ -17,7 +17,13 @@ public class AddressTest {
     @Test
     public void ifFileDoesNotExists_thenReturn_NotPresent() {
         AddressDetails details=new AddressDetails();
-        String isIt=addressBook.isFilePresentOrNot(FILE_PATH,"book1.json");
+        String isIt=addressBook.isFilePresentOrNot(FILE_PATH,"book.json");
         Assert.assertEquals("FILE-NOTPRESENT",isIt);
+    }
+    @Test
+    public void ifFileDoesExists_thenReturn_Present() {
+        AddressDetails details=new AddressDetails();
+        String isIt=addressBook.isFilePresentOrNot(FILE_PATH,"book1.json");
+        Assert.assertEquals("FILE-PRESENT",isIt);
     }
 }
