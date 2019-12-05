@@ -32,11 +32,13 @@ public class AddressBook implements IAddressBook {
     public String isFilePresentOrNot(String filePath,String FileName){
         File file=new File(FILE_PATH);
         try {
-            if(file.createNewFile())
+            if(!file.createNewFile())
                 return "FILE-NOTPRESENT";
+            else
+                return "FILE-PRESENT";
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "FILE-PRESENT";
+        return "NO";
     }
 }
