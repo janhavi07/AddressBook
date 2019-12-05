@@ -21,15 +21,22 @@ public class AddressBook implements IAddressBook {
         return "Not created";
     }
 
-
-
     public String isFilePresentOrNot(String filePath,String FileName){
-        String fullpath=filePath+FileName;
-        File file=new File(fullpath);
+        String finalFileName=FILE_PATH+FileName;
+        File file=new File(finalFileName);
         if(file.exists()) {
             return "FILE-PRESENT";
         } else
-            return "FILE-NOTPRESENT";
+            return "FILE-NOT-PRESENT";
 
+    }
+
+    public String deleteFile(String fileName) {
+        String finalFileName=FILE_PATH+fileName;
+        File file=new File(finalFileName);
+        if(file.delete())
+            return "File-Deleted";
+        else
+            return "Not-Deleted";
     }
 }

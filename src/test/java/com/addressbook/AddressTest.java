@@ -17,7 +17,7 @@ public class AddressTest {
     @Test
     public void ifFileDoesNotExists_thenReturn_NotPresent() {
         String isIt=addressBook.isFilePresentOrNot(FILE_PATH,"book.json");
-        Assert.assertEquals("FILE-NOTPRESENT",isIt);
+        Assert.assertEquals("FILE-NOT-PRESENT",isIt);
     }
     @Test
     public void ifFileDoesExists_thenReturn_Present() {
@@ -29,5 +29,17 @@ public class AddressTest {
     public void To_createA_File_ShouldReturn_FileCreated() {
         String isIt=addressBook.createFile("book2.json");
         Assert.assertEquals("File Created",isIt);
+    }
+
+    @Test
+    public void to_DeleteAFile_ShouldReturn_FileDeleted() {
+        String isIt=addressBook.deleteFile("book2.json");
+        Assert.assertEquals("File-Deleted",isIt);
+    }
+
+    @Test
+    public void ifIncorrectFileName_to_DeleteAFile_ShouldReturn_FileNotDeleted() {
+        String isIt=addressBook.deleteFile("book3.json");
+        Assert.assertEquals("Not-Deleted",isIt);
     }
 }

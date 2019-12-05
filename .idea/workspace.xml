@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/IAddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/IAddressBook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressTest.class" afterDir="false" />
@@ -78,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressTest.To_createA_File_ShouldReturn_FileCreated">
+  <component name="RunManager" selected="Gradle.AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted">
     <configuration name="AddressTest.To_createA_File_ShouldReturn_FileCreated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,11 +158,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AddressTest.To_createA_File_ShouldReturn_FileCreated" />
-        <item itemvalue="Gradle.AddressTest.ifFileDoesNotExists_thenReturn_NotPresent" />
+        <item itemvalue="Gradle.AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted" />
         <item itemvalue="Gradle.AddressTest.ifFileDoesExists_thenReturn_Present" />
+        <item itemvalue="Gradle.AddressTest.ifFileDoesNotExists_thenReturn_NotPresent" />
+        <item itemvalue="Gradle.AddressTest.To_createA_File_ShouldReturn_FileCreated" />
         <item itemvalue="Gradle.AddressTest.toCheckIf_AdrressDetails_areInitialised" />
       </list>
     </recent_temporary>

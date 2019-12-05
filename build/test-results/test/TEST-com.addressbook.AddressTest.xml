@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T06:48:08" hostname="admin293-H110M-H" time="0.001">
+<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T07:04:19" hostname="admin293-H110M-H" time="0.001">
   <properties/>
-  <testcase name="ifFileDoesExists_thenReturn_Present" classname="com.addressbook.AddressTest" time="0.001"/>
+  <testcase name="to_DeleteAFile_ShouldReturn_FileDeleted" classname="com.addressbook.AddressTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
