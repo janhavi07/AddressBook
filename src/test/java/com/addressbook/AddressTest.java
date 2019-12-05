@@ -9,7 +9,7 @@ public class AddressTest {
     @Test
     public void toCheckIf_AddressDetails_areInitialised() {
         AddressDetails details = new AddressDetails("Janhavi","Parte","FriendsColony",
-                "Mumbai","Maharashtra",400042);
+                                                                  "Mumbai","Maharashtra",400042);
         String name=details.getFirstName();
         Assert.assertEquals("Janhavi",name);
     }
@@ -41,5 +41,10 @@ public class AddressTest {
     public void ifIncorrectFileName_to_DeleteAFile_ShouldReturn_FileNotDeleted() {
         String isIt=addressBook.deleteFile("book3.json");
         Assert.assertEquals("Not-Deleted",isIt);
+    }
+
+    @Test
+    public void to_AddPersonDetails() {
+        addressBook.add("book1.json");
     }
 }
