@@ -90,6 +90,32 @@ public class AddressBook implements IAddressBook {
         return false;
     }
 
+    @Override
+    public boolean sort(String fieldToSortBy, String fileName) {
+        String finalFileName = FILE_PATH + fileName;
+        List<AddressDetails> personBookList = readFromFile(finalFileName);
+        for (int i = 0; i < personBookList.size(); i++) {
+            for (int j = i + 1; j < personBookList.size(); j++) {
+                if (fieldToSortBy.equals("Name")) {
+                    if(personBookList.get(i).getFirstName().compareTo(personBookList.get(j).getFirstName())>0) {
+                        swapping(personBookList,i,j);
+                        writeToFile(personBookList,finalFileName);
+
+                    }
+                }
+            }
+
+        }
+        return true;
+    }
+
+    private void swapping(List<AddressDetails> personBookList, int i, int j) {
+        AddressDetails tempDetail1= personBookList.get(i);
+        AddressDetails tempDetail2=personBookList.get(j);
+        personBookList.set(i,tempDetail2);
+        personBookList.set(j,tempDetail1);
+    }
+
 
     public void writeToFile(List<AddressDetails> personBookList, String fileName){
         File file=new File(fileName);

@@ -1,6 +1,22 @@
 [
   {
+    "firstName": "Aan",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Pune",
+    "state": "Orrisa",
+    "zip": "85135"
+  },
+  {
     "firstName": "Avani",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
+  },
+  {
+    "firstName": "Durva",
     "lastName": "Parte",
     "address": "FriendsColony",
     "city": "Mumbai",
@@ -16,11 +32,27 @@
     "zip": "400042"
   },
   {
-    "firstName": "jan",
+    "firstName": "Popy",
     "lastName": "Parte",
     "address": "FriendsColony",
-    "city": "Pune",
-    "state": "Orrisa",
-    "zip": "85135"
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
+  },
+  {
+    "firstName": "Sima",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
+  },
+  {
+    "firstName": "Yashika",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
   }
 ]

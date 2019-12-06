@@ -61,7 +61,7 @@ public class AddressTest {
 
     @Test
     public void toCheckIf_AddressDetails_AreWrite_InGson() {
-        AddressDetails details = iaddressBook.addDetails("jan", "Parte", "FriendsColony",
+        AddressDetails details = iaddressBook.addDetails("Sima", "Parte", "FriendsColony",
                 "Mumbai", "Maharashtra", "400042", "book1.json");
         Assert.assertTrue(true);
 
@@ -99,6 +99,12 @@ public class AddressTest {
     public void toCheckIfAParticulare_Field_NotEdited_ThenReturn_False() {
         boolean edit=iaddressBook.editDetails("Peep","Orrisa","Pune","85135","book1.json");
         Assert.assertEquals(false,edit);
+    }
+
+    @Test
+    public void toCheckIfList_IsSorted_Return_True() {
+        boolean sort=iaddressBook.sort("Name","book1.json");
+        Assert.assertEquals(true,sort);
     }
 }
 

@@ -9,4 +9,6 @@ public interface IAddressBook {
     public String deleteDetails(String toChange, String fileName);
 
     public boolean editDetails(String fieldName,String state,String city,String zipcode, String fileName);
+
+    boolean sort(String filedToSortBy, String fileName);
 }
