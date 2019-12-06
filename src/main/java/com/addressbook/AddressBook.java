@@ -97,15 +97,27 @@ public class AddressBook implements IAddressBook {
         for (int i = 0; i < personBookList.size(); i++) {
             for (int j = i + 1; j < personBookList.size(); j++) {
                 if (fieldToSortBy.equals("Name")) {
-                    if(personBookList.get(i).getFirstName().compareTo(personBookList.get(j).getFirstName())>0) {
-                        swapping(personBookList,i,j);
-                        writeToFile(personBookList,finalFileName);
+                    if (personBookList.get(i).getFirstName().compareTo(personBookList.get(j).getFirstName()) > 0) {
+                        swapping(personBookList, i, j);
+                    }
+                } else if (fieldToSortBy.equals("City")) {
+                    if (personBookList.get(i).getCity().compareTo(personBookList.get(j).getCity()) > 0) {
+                        swapping(personBookList, i, j);
+                    }
 
+                } else if (fieldToSortBy.equals("State")) {
+                    if (personBookList.get(i).getState().compareTo(personBookList.get(j).getState()) > 0) {
+                        swapping(personBookList, i, j);
+                    }
+
+                } else if (fieldToSortBy.equals("Zip")) {
+                    if (personBookList.get(i).getZip().compareTo(personBookList.get(j).getZip()) > 0) {
+                        swapping(personBookList, i, j);
                     }
                 }
             }
-
         }
+        writeToFile(personBookList, finalFileName);
         return true;
     }
 
@@ -128,13 +140,13 @@ public class AddressBook implements IAddressBook {
 
     public List<AddressDetails> readFromFile(String fileName){
         File file=new File(fileName);
-        List<AddressDetails> list= null;
+        List<AddressDetails> personBookList= null;
         try {
-            list = new ArrayList(Arrays.asList(mapper.readValue(file, AddressDetails[].class)));
+            personBookList = new ArrayList(Arrays.asList(mapper.readValue(file, AddressDetails[].class)));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return list;
+        return personBookList;
 
     }
 }

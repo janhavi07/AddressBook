@@ -102,8 +102,13 @@ public class AddressTest {
     }
 
     @Test
-    public void toCheckIfList_IsSorted_Return_True() {
+    public void toCheckIfList_IsSortByName_Return_True() {
         boolean sort=iaddressBook.sort("Name","book1.json");
+        Assert.assertEquals(true,sort);
+    }
+    @Test
+    public void toCheckIfList_IsSortByCity_Return_True() {
+        boolean sort=iaddressBook.sort("City","book1.json");
         Assert.assertEquals(true,sort);
     }
 }
