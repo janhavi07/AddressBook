@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T07:56:55" hostname="admin293-H110M-H" time="0.045">
+<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T08:02:47" hostname="admin293-H110M-H" time="0.045">
   <properties/>
-  <testcase name="toCheckIf_AddressDetails_AreWrite_InGson" classname="com.addressbook.AddressTest" time="0.045"/>
+  <testcase name="toCheckIf_particularDetails_Deleted_ShouldReturn_NotRemoved" classname="com.addressbook.AddressTest" time="0.045"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

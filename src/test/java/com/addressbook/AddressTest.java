@@ -71,15 +71,22 @@ public class AddressTest {
     public void toCheckIf_AddressDetails_AreRead_fromGson() {
         AddressDetails details = iaddressBook.addDetails("Avani", "Parte", "FriendsColony",
                 "Mumbai", "Maharashtra", "400042", "book1.json");
-       // boolean isIt = addressBook.writeToGson(details, "book1.json");
+        // boolean isIt = addressBook.writeToGson(details, "book1.json");
         //Assert.assertEquals(true, isIt);
 
     }
 
     @Test
-    public void toCheckIf_particularDetails_Deleted() {
-       String detail=iaddressBook.deleteDetails("jan","book1.json");
-       Assert.assertEquals("Removed",detail);
+    public void toCheckIf_particularDetails_Deleted_ShouldReturn_Removed() {
+        String detail = iaddressBook.deleteDetails("jan", "book1.json");
+        Assert.assertEquals("Removed", detail);
+    }
+
+    @Test
+    public void toCheckIf_particularDetails_Deleted_ShouldReturn_NotRemoved() {
+        String detail = iaddressBook.deleteDetails("jan", "book1.json");
+        Assert.assertNotEquals("NotRemoved", detail);
+
     }
 }
 
