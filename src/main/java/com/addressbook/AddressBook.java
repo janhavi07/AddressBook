@@ -13,7 +13,7 @@ public class AddressBook implements IAddressBook {
     List<AddressDetails> personBookList ;
 
     @Override
-    public String createFile(String fileName) {
+    public String createFile(String fileName) throws AddressBookExceptions {
         String finalFileName = FILE_PATH + fileName;
         File file = new File(finalFileName);
         try {
@@ -21,7 +21,7 @@ public class AddressBook implements IAddressBook {
             if (isCreatedOrNot)
                 return "File Created";
         } catch (IOException e) {
-            e.printStackTrace();
+           throw new AddressBookExceptions(AddressBookExceptions.ExceptionType.NO_SUCH_FILE,"Wrong file inputted");
         }
         return "Not created";
     }
@@ -48,7 +48,7 @@ public class AddressBook implements IAddressBook {
 
     @Override
     public AddressDetails addDetails(String firstName, String lastName, String address, String city,
-                                     String state, String zipcode, String fileName) {
+                                     String state, String zipcode, String fileName) throws AddressBookExceptions {
 
         String finalFileName=FILE_PATH+fileName;
         List<AddressDetails> personBookList= readFromFile(finalFileName);
@@ -60,7 +60,7 @@ public class AddressBook implements IAddressBook {
     }
 
     @Override
-    public String deleteDetails(String record, String fileName) {
+    public String deleteDetails(String record, String fileName) throws AddressBookExceptions {
         String finalFileName=FILE_PATH+fileName;
         List<AddressDetails> list=readFromFile(finalFileName);
         List<AddressDetails> temporaryList=new ArrayList<>();
@@ -74,9 +74,14 @@ public class AddressBook implements IAddressBook {
     }
 
     @Override
-    public boolean editDetails(String fieldName,String state,String city,String zipcode, String fileName) {
+    public boolean editDetails(String fieldName,String state,String city,String zipcode, String fileName) throws AddressBookExceptions {
         String finalFileName = FILE_PATH + fileName;
-        List<AddressDetails> personBookList = readFromFile(finalFileName);
+        List<AddressDetails> personBookList = null;
+        try {
+            personBookList = readFromFile(finalFileName);
+        } catch (AddressBookExceptions addressBookExceptions) {
+            addressBookExceptions.printStackTrace();
+        }
         for (int i = 0; i < personBookList.size(); i++) {
             if (fieldName.equals(personBookList.get(i).getFirstName())) {
                 personBookList.get(i).setState(state);
@@ -93,7 +98,9 @@ public class AddressBook implements IAddressBook {
     @Override
     public boolean sort(String fieldToSortBy, String fileName) {
         String finalFileName = FILE_PATH + fileName;
-        List<AddressDetails> personBookList = readFromFile(finalFileName);
+        List<AddressDetails> personBookList = null;
+        try {
+            personBookList = readFromFile(finalFileName);
         for (int i = 0; i < personBookList.size(); i++) {
             for (int j = i + 1; j < personBookList.size(); j++) {
                 if (fieldToSortBy.equals("Name")) {
@@ -118,6 +125,9 @@ public class AddressBook implements IAddressBook {
             }
         }
         writeToFile(personBookList, finalFileName);
+        } catch (AddressBookExceptions addressBookExceptions) {
+            addressBookExceptions.printStackTrace();
+        }
         return true;
     }
 
@@ -129,22 +139,22 @@ public class AddressBook implements IAddressBook {
     }
 
 
-    public void writeToFile(List<AddressDetails> personBookList, String fileName){
+    public void writeToFile(List<AddressDetails> personBookList, String fileName) throws AddressBookExceptions {
         File file=new File(fileName);
         try {
             mapper.writeValue(file,personBookList);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new AddressBookExceptions(AddressBookExceptions.ExceptionType.NO_SUCH_FILE,"Wrong file Inputted");
         }
     }
 
-    public List<AddressDetails> readFromFile(String fileName){
+    public List<AddressDetails> readFromFile(String fileName) throws AddressBookExceptions {
         File file=new File(fileName);
         List<AddressDetails> personBookList= null;
         try {
             personBookList = new ArrayList(Arrays.asList(mapper.readValue(file, AddressDetails[].class)));
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new AddressBookExceptions(AddressBookExceptions.ExceptionType.NO_SUCH_FILE,"Wrong file Inputted");
         }
         return personBookList;
 
