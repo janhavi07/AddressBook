@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T11:22:53" hostname="admin293-H110M-H" time="0.001">
+<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T06:56:59" hostname="admin293-H110M-H" time="0.045">
   <properties/>
-  <testcase name="toCheckDetails_Added_in_PersonDetails" classname="com.addressbook.AddressTest" time="0.001"/>
+  <testcase name="toCheckIf_AddressDetails_AreRead_fromGson" classname="com.addressbook.AddressTest" time="0.045"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

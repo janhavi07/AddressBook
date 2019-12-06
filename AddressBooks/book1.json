@@ -1,10 +1,26 @@
 [
   {
-    "firstName": "Janhavi",
+    "firstName": "jan",
     "lastName": "Parte",
-    "address": "FriendsColony,Bhandup",
+    "address": "FriendsColony",
     "city": "Mumbai",
     "state": "Maharashtra",
-    "zip": 400042.0
+    "zip": "400042"
+  },
+  {
+    "firstName": "jan",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
+  },
+  {
+    "firstName": "Avani",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
   }
 ]

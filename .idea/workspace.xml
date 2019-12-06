@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da5259a-26af-47b9-bccd-30a9da6b9e1a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/book1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,12 +13,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AddressBooks/book1.json" beforeDir="false" afterPath="$PROJECT_DIR$/AddressBooks/book1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/IAddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/IAddressBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/PersonBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/IAddressBook.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.addressbook.AddressTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.addressbook.AddressTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
@@ -83,7 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressTest.to_AddPersonDetails">
+  <component name="RunManager" selected="Gradle.AddressTest.toCheckIf_AddressDetails_AreRead_fromGson">
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.addressbook.Driver" />
       <module name="AddressBook.main" />
@@ -97,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddressTest.ifFileDoesExists_thenReturn_Present" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.ifFileDoesExists_thenReturn_Present&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -117,12 +120,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressTest.ifFileDoesNotExists_thenReturn_NotPresent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressTest.toCheckIf_AddressDetails_AreRead_fromGson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.ifFileDoesNotExists_thenReturn_NotPresent&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.toCheckIf_AddressDetails_AreRead_fromGson&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -137,12 +140,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressTest.toCheckIf_AddressDetails_areInitialised" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressTest.toCheckIf_AddressDetails_AreWrite_InGson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.toCheckIf_AddressDetails_areInitialised&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.toCheckIf_AddressDetails_AreWrite_InGson&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -157,12 +160,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressTest.to_AddPersonDetails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.to_AddPersonDetails&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -179,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AddressTest.to_AddPersonDetails" />
-        <item itemvalue="Gradle.AddressTest.toCheckIf_AddressDetails_areInitialised" />
-        <item itemvalue="Gradle.AddressTest.ifFileDoesNotExists_thenReturn_NotPresent" />
-        <item itemvalue="Gradle.AddressTest.ifFileDoesExists_thenReturn_Present" />
+        <item itemvalue="Gradle.AddressTest.toCheckIf_AddressDetails_AreRead_fromGson" />
+        <item itemvalue="Gradle.AddressTest.toCheckIf_AddressDetails_AreWrite_InGson" />
         <item itemvalue="Application.Driver" />
+        <item itemvalue="Gradle.AddressTest.to_DeleteAFile_ShouldReturn_FileDeleted" />
+        <item itemvalue="Gradle.AddressTest" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +208,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

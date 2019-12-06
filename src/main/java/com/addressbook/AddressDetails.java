@@ -9,7 +9,6 @@ public class AddressDetails {
     private String zip;
 
     public AddressDetails(){
-
     }
 
    public AddressDetails(String firstName, String lastName, String address, String city, String state, String zip){
