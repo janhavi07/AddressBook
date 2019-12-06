@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T09:59:49" hostname="admin293-H110M-H" time="0.046">
+<testsuite name="com.addressbook.AddressTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T10:04:04" hostname="admin293-H110M-H" time="0.035">
   <properties/>
-  <testcase name="toCheckIfAParticulare_FieldIsEdited" classname="com.addressbook.AddressTest" time="0.046"/>
+  <testcase name="toCheckIfAParticulare_Field_NotEdited_ThenReturn_False" classname="com.addressbook.AddressTest" time="0.035"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

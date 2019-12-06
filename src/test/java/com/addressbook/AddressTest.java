@@ -90,9 +90,15 @@ public class AddressTest {
     }
 
     @Test
-    public void toCheckIfAParticulare_FieldIsEdited() {
+    public void toCheckIfAParticulare_FieldIsEdited_ThenReturn_True() {
         boolean edit=iaddressBook.editDetails("jan","Orrisa","Pune","85135","book1.json");
         Assert.assertEquals(true,edit);
+    }
+
+    @Test
+    public void toCheckIfAParticulare_Field_NotEdited_ThenReturn_False() {
+        boolean edit=iaddressBook.editDetails("Peep","Orrisa","Pune","85135","book1.json");
+        Assert.assertEquals(false,edit);
     }
 }
 
