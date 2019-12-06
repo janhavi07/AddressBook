@@ -36,7 +36,7 @@ public class AddressTest {
 
     @Test
     public void To_createA_File_ShouldReturn_FileCreated() {
-        String isIt = iaddressBook.createFile("book2.json");
+        String isIt = iaddressBook.createFile("book3.json");
         Assert.assertEquals("File Created", isIt);
     }
 
@@ -63,8 +63,7 @@ public class AddressTest {
     public void toCheckIf_AddressDetails_AreWrite_InGson() {
         AddressDetails details = iaddressBook.addDetails("jan", "Parte", "FriendsColony",
                 "Mumbai", "Maharashtra", "400042", "book1.json");
-        //boolean isIt = addressBook.writeToGson(details, "book1.json");
-        //Assert.assertEquals(true,isIt);
+        Assert.assertTrue(true);
 
     }
 
@@ -75,6 +74,12 @@ public class AddressTest {
        // boolean isIt = addressBook.writeToGson(details, "book1.json");
         //Assert.assertEquals(true, isIt);
 
+    }
+
+    @Test
+    public void toCheckIf_particularDetails_Deleted() {
+       String detail=iaddressBook.deleteDetails("jan","book1.json");
+       Assert.assertEquals("Removed",detail);
     }
 }
 

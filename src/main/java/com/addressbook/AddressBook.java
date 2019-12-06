@@ -1,8 +1,7 @@
 package com.addressbook;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import jdk.nashorn.internal.parser.JSONParser;
+
 import java.io.*;
 import java.util.*;
 
@@ -52,15 +51,29 @@ public class AddressBook implements IAddressBook {
                                      String state, String zipcode, String fileName) {
 
         String finalFileName=FILE_PATH+fileName;
-        List<AddressDetails> personBookList=readFromJson(finalFileName);
+        List<AddressDetails> personBookList= readFromFile(finalFileName);
         AddressDetails personDetails = new AddressDetails(firstName, lastName, address, city, state, zipcode);
         personBookList.add(personDetails);
-        writeToGson(personBookList,finalFileName);
+        writeToFile(personBookList,finalFileName);
 
         return personDetails;
     }
 
-    public void writeToGson(List<AddressDetails> personBookList,String fileName){
+    @Override
+    public String deleteDetails(String record, String fileName) {
+        String finalFileName=FILE_PATH+fileName;
+        List<AddressDetails> list=readFromFile(finalFileName);
+        List<AddressDetails> temporaryList=new ArrayList<>();
+        for(int i=0;i<list.size();i++){
+            if(!record.equals(list.get(i).getFirstName()))
+                temporaryList.add(list.get(i));
+        }
+        writeToFile(temporaryList,finalFileName);
+        return "Removed";
+
+    }
+
+    public void writeToFile(List<AddressDetails> personBookList, String fileName){
         File file=new File(fileName);
         try {
             mapper.writeValue(file,personBookList);
@@ -69,8 +82,7 @@ public class AddressBook implements IAddressBook {
         }
     }
 
-
-    public List<AddressDetails> readFromJson(String fileName){
+    public List<AddressDetails> readFromFile(String fileName){
         File file=new File(fileName);
         List<AddressDetails> list= null;
         try {
