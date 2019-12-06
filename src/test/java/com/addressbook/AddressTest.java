@@ -88,6 +88,12 @@ public class AddressTest {
         Assert.assertNotEquals("NotRemoved", detail);
 
     }
+
+    @Test
+    public void toCheckIfAParticulare_FieldIsEdited() {
+        boolean edit=iaddressBook.editDetails("jan","Orrisa","Pune","85135","book1.json");
+        Assert.assertEquals(true,edit);
+    }
 }
 
 

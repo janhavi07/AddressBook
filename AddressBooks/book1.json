@@ -1,1 +1,26 @@
-[{"firstName":"Avani","lastName":"Parte","address":"FriendsColony","city":"Mumbai","state":"Maharashtra","zip":"400042"},{"firstName":"Janhavi","lastName":"Parte","address":"FriendsColony","city":"Mumbai","state":"Maharashtra","zip":"400042"}]
+[
+  {
+    "firstName": "Avani",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
+  },
+  {
+    "firstName": "Janhavi",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "400042"
+  },
+  {
+    "firstName": "jan",
+    "lastName": "Parte",
+    "address": "FriendsColony",
+    "city": "Pune",
+    "state": "Orrisa",
+    "zip": "85135"
+  }
+]

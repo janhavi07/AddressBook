@@ -7,4 +7,6 @@ public interface IAddressBook {
                                      String state, String zipcode,String fileName);
 
     public String deleteDetails(String toChange, String fileName);
+
+    public boolean editDetails(String fieldName,String state,String city,String zipcode, String fileName);
 }

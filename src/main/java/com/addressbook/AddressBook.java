@@ -73,6 +73,24 @@ public class AddressBook implements IAddressBook {
 
     }
 
+    @Override
+    public boolean editDetails(String fieldName,String state,String city,String zipcode, String fileName) {
+        String finalFileName = FILE_PATH + fileName;
+        List<AddressDetails> personBookList = readFromFile(finalFileName);
+        for (int i = 0; i < personBookList.size(); i++) {
+            if (fieldName.equals(personBookList.get(i).getFirstName())) {
+                personBookList.get(i).setState(state);
+                personBookList.get(i).setCity(city);
+                personBookList.get(i).setZip(zipcode);
+                writeToFile(personBookList, finalFileName);
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
     public void writeToFile(List<AddressDetails> personBookList, String fileName){
         File file=new File(fileName);
         try {
