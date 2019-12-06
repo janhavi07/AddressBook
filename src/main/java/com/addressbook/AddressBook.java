@@ -60,21 +60,6 @@ public class AddressBook implements IAddressBook {
         return personDetails;
     }
 
-//    public boolean writeToGson(AddressDetails personDetails, String fileName) {
-//        personBookList.add(personDetails);
-//        String finalFileName=FILE_PATH+fileName;
-//        Gson gson = new Gson();
-//        String json = gson.toJson(personBookList);
-//        FileWriter writer = null;
-//        try {
-//            writer = new FileWriter(finalFileName);
-//            writer.write(json);
-//            writer.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return true;
-//    }
     public void writeToGson(List<AddressDetails> personBookList,String fileName){
         File file=new File(fileName);
         try {
@@ -83,23 +68,6 @@ public class AddressBook implements IAddressBook {
             e.printStackTrace();
         }
     }
-
-//    public List<AddressDetails> readFromGson(String finalFileName) {
-//        Gson gson = new Gson();
-//        List<AddressDetails> list1=new ArrayList();
-//        try {
-//            BufferedReader br = new BufferedReader(new FileReader(finalFileName));
-//
-//            Object json = gson.fromJson(br, Object.class);
-//            //System.out.println(details.getFirstName());
-//            //personBookList.addAll((Collection<? extends AddressDetails>) details);
-//            list1.add((AddressDetails) json);
-//           // personBookList.add((AddressDetails) list1);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        return list1;
-//    }
 
 
     public List<AddressDetails> readFromJson(String fileName){
