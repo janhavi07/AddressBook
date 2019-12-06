@@ -38,7 +38,7 @@ public class AddressTest {
     @Test
     public void To_createA_File_ShouldReturn_FileCreated() {
         try {
-            String isIt = iaddressBook.createFile("book3.json");
+            String isIt = iaddressBook.createFile("book5.json");
             Assert.assertEquals("File Created", isIt);
         } catch (AddressBookExceptions addressBookExceptions) {
             addressBookExceptions.printStackTrace();
@@ -47,13 +47,13 @@ public class AddressTest {
 
     @Test
     public void to_DeleteAFile_ShouldReturn_FileDeleted() {
-        String isIt = iaddressBook.deleteFile("book2.json");
+        String isIt = iaddressBook.deleteFile("book3.json");
         Assert.assertEquals("File-Deleted", isIt);
     }
 
     @Test
     public void ifIncorrectFileName_to_DeleteAFile_ShouldReturn_FileNotDeleted() {
-        String isIt = iaddressBook.deleteFile("book3.json");
+        String isIt = iaddressBook.deleteFile("book9.json");
         Assert.assertEquals("Not-Deleted", isIt);
     }
 
