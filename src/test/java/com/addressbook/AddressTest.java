@@ -166,6 +166,19 @@ public class AddressTest {
             Assert.assertEquals(AddressBookExceptions.ExceptionType.NO_SUCH_FILE,addressBookExceptions.type);
         }
     }
+    @Test
+    public void toCheckDetails_Added_in_PersonDetailsInputInWrongFile_ThrowsException() {
+
+        AddressDetails details = null;
+        try {
+            details = iaddressBook.addDetails("Janhavi", "Parte", "FriendsColony",
+                    "Mumbai", "Maharashtra", "400042", "book3.json");
+        } catch (AddressBookExceptions addressBookExceptions) {
+            addressBookExceptions.printStackTrace();
+            Assert.assertEquals(AddressBookExceptions.ExceptionType.NO_SUCH_FILE,addressBookExceptions.type);
+        }
+
+    }
 
 
 }
